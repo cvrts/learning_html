@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--
+    절대경로: 처음부터 끝까지 다 적음
+    상대경로: 권장사항, 현재 내위치를 기준으로 찾음
+    .하나이면 현재 내가 바라보는 경로
+    ..현재 내위치의 상위 경로
+  -->
+    <link rel="stylesheet" href="./terrGYM.css" />
+    <script
+      src="https://kit.fontawesome.com/575f1d7f35.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--메뉴바구성(Navbar)-->
+    <header>
+      <h1>TerrGYM</h1>
+      <ul class="gnb">
+        <li>
+          <a href="http://192.168.10.81:5500/day3/display1.html">COMPANY</a>
+        </li>
+        <!--li*6>a[href='#']-->
+        <li><a href="https://www.coupang.com/">BRAND</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">LOCATION</a></li>
+      </ul>
+      <ul class="sns">
+        <li>
+          <a href="#"><i class="fas fa-search"></i></a>
+          <!--Ctrl +space 눌러 아이콘 선택-->
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+        </li>
+      </ul>
+    </header>
+    <hr />
+    <!--콘텐츠구성(figure태그)-->
+
+    <div>
+      <video src="../images/forest.mp4" autoplay muted loop></video>
+      <article class="txt">
+        <p>Back-end/Front-End<br/>Development</p>
+      </article>
+    </div>
+    <hr />
+    <!--콘텐츠구성(figure태그)-->
+    <flooter>2023 TerrGYM & copy; ALL RIGHTS RESERVED</flooter>
+  </body>
+</html>

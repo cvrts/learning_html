@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredericka+the+Great&family=Orbitron&display=swap");
+
+* {
+  margin: 0px; /*화면 좌측 상단 기준 외부 여백 0(top) 0(right) 0(bottom) 0(left)으로 초기화*/
+  padding: 0px;
+  box-sizing: border-box; /*여백을 포함하는 사이즈 계산 ::: 여백이 5면 10을 차지,*/
+  /* border: 1px solid red; */
+}
+body {
+  background-color: black; /*전체화면을 검정으로*/
+}
+ul {
+  list-style: none; /*구슬 없앰*/
+}
+a {
+  text-decoration: none; /*링크 - 손모양 밑줄 제거*/
+}
+header {
+  width: 100%; /*반응형 웹*/
+  display: flex; /*inline, block inline-block, flex(justify-content(flex일때만 가능) => spacebetween을 많이 사용함, 메뉴바 구성시에*/
+  border-bottom: 1px solid #aaa; /*바닥에 선그리기 두께 1px 점선 그리고 싶으면 dotted 색상*/
+  justify-content: space-between; /*flex일때만 해당*/
+  align-items: center;
+  top: 0px; /*왼쪽위 꼭지점 기준 y좌표*/
+  left: 0px; /*왼쪽위 꼭지점 기준 x좌표*/
+  color: #fff;
+  z-index: 2;
+}
+
+header h1{
+    font : bold 24px/1 "Hehmlet";
+    color: white;
+    z-index: 2;
+}
+
+header .gnb li {
+  /*앵커태그 - 최근에 본 상품*/
+  margin: 0px 20px;
+}
+header .gnb li a {
+  color: #fff;
+}
+
+header .sns li {
+  margin: 0px 10px; /*top과 bottom은 0이고 left와 right는 10씩*/
+}
+
+header .sns li a {
+  font-size: 100px; /* 앵커태그안에 내용 글자크기 조정 - 이미지크기가 조정됨!*/
+  color: aquamarine; /*색상값을 16진수로 표현할 수 있음*/
+}
+
+.gnb {
+  display: flex;
+  z-index: 2;
+}
+
+.sns {
+  /*폰트어썸의 이미지*/
+  display: flex; /*ul태그 아래 il태그는 수직방향 배치가 됨*/
+}
+
+div {
+  width: 100%;
+  height: 100vh; /* 뷰포트 vh */
+  position: absolute; /*좌표값에 따라 배치하기위해 absolute*/
+  top: 0px;
+  left: 0px;
+  overflow: hidden; /*스크롤 바 숨김*/
+  z-index: 1; /*레이어의 값, 이 위에 메뉴 글씨가 zindex2*/
+}
+
+div video {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover;*/
+}
+
+.txt{
+    position: absolute;
+    left: 6vw;
+    top: 50%;
+    z-index: 2;
+    transform: translate(5%);
+    color: white;
+}
+
+.txt p{
+    font: normal 8vw/1 "Fredericka the Great";
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  font: 12px/1 "arial"; /*  글자크기/로우높이값 "글꼴" */
+  text-align: center; /*   글자의 위치 */
+  letter-spacing: 2px; /*   알파벳과 알파벳 사이의 간격 */
+  padding: 5vh 5vw; /* v는 뷰포트를 의미, 보여지는 공간 내부 여백값 viewport Height, Width*/
+  color: white;
+  z-index: 2;
+}

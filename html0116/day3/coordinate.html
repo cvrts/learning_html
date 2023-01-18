@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coordinate</title>
+    <link rel="stylesheet" href="./coordinate.css" />
+  </head>
+  <body>
+    <div class="line horizontal"></div>
+    <div class="line vertical"></div>
+    <img class="target" src="../images/target.png" alt="target" />
+    <span class="loc">현 좌표값 </span>
+    <script type="text/javascript">
+      //변수선언시 var사용하지 말 것.
+      //let, const 둘 중 하나를 사용.(각각 변수와 상수)
+      //window 객체의 자손객체임 - document - 여기서는 coordinate.html전체
+      //자바스크립트 언어로 html문서의 태그를 접근하려면 document객체가 제공하는
+      //함수 querySelector사용함
+      const vertical = document.querySelector(".vertical");
+      const horizontal = document.querySelector(".horizontal");
+      const target = document.querySelector(".target");
+      const loc = document.querySelector(".loc");
+      document.addEventListener("mousemove", (e) => {
+        const x = event.clientX;
+        const y = event.clientY;
+        console.log(`${x} ${y}`);
+
+        vertical.style.left = `${x}px`;
+        horizontal.style.top = `${y}px`;
+        target.style.left = `${x}px`;
+        target.style.top = `${y}px`;
+        loc.style.left = `${x}px`;
+        loc.style.top = `${y}px`;
+
+        loc.innerHTML = `${x}, ${y}`;
+      });
+    </script>
+  </body>
+</html>

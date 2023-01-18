@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 전세계 표준 포맷 -->
+    <!-- explorer에 여러버전이 있음, 혹시 하위버전에서 동작이 될 때 최신 익스플로러로 랜더링해주는 옵션 -->
+    <!-- edge버전부터 크롬 V8엔진 사용 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- viewport가 있어야 모바일 디바이스가 모바일 페이지를 제대로 출력함. 
+        하이브리드앱 = 네이티브앱 + 웹앱
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>윈도우사이즈</title>
+    <style>
+      .tag {
+        display: inline-block; /* 컨텐츠를 감싸줌 */
+        background-color: antiquewhite;
+        font-size: 48px;
+        padding: 16px; /* 상하좌우 */
+        margin-top: 16px;
+        margin-bottom: 40px;
+      }
+      div{
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+        border: 10px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tag">윈도우 사이즈</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //window.addEventListener('resize', ()=>{
+        window.addEventListener('resize', function(){
+            //arrow function
+            //모니터의 화면 크기
+            console.log(`window.screen : ${window.screen.width}, ${window.screen.height}`);
+        })//
+        window.addEventListener('resize', ()=>{
+            //웹페이지 + 스크롤바
+            console.log(`window.outter : ${window.outerWidth}, ${window.outerHeight}`);
+        })
+        window.addEventListener('resize', ()=>{
+            //url과 탭(세션아이디를 쿠키에 저장함) 전체적인 브라우저 크기
+            console.log(`window.inner : ${window.innerWidth}, ${window.innerHeight}`);
+        })
+        window.addEventListener('resize', ()=>{
+            console.log(`window.doc : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`);
+        })
+    </script>
+  </body>
+</html>
